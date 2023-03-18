@@ -1,9 +1,8 @@
 # The QuDotVM Compiler qudotc
 
-The qudotc project is a compiler for the qudotvm bytecode virtual machine instruction set.
-
-The qudot instruction set is a domain specific language developed for the classical simulation of quantum circuits.
-See below for example circuits built using the qudot intermediate language representation. A valid qudot file is
+The qudotc project is a compiler for the qudot bytecode virtual machine instruction set architecture (ISA).
+The qudot ISA is developed for the classical simulation of quantum circuits.
+See below for example circuits built using the qudot intermediate language representation. A valid qudot assembly file is
 compiled into a `.qudotc` binary to be executed on a qudot virtual machine. The binary file follows the following specification
 
 We use the following definitions for clarity
@@ -45,7 +44,7 @@ only current constPoolInfo.type is 1 (for GATE)
 
 The last part of the qudot file is a byte array with a sequence of bytecodes to be executed by the QuDotVM. The bytecodes must comply with the QuDotVM Instruction Set
 
-### The QuDotVM Instruction Set
+### The QuDot Instruction Set Architecture
 
 There are two types of Registers in the qudotvm instruction set: a classical register (REG) for classical bits and a quantum register (QUREG) for qubits
 
@@ -124,7 +123,7 @@ There are two types of Registers in the qudotvm instruction set: a classical reg
 
 The example use the qudot bytecode language. The bytecode programs are in a `.qudot` file and need to be compiled to a `.qudotc` file by the qudot compiler. Once compiled they can be run on the `qudotvm`.
 
-### I. Running
+### 0. Running
 
 ```
 $ qudotc
